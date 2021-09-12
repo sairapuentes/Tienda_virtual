@@ -9,7 +9,7 @@
 <body>
 
   <h1>Tienda</h1>
-  <
+  <h2>grupo</h2>
 
 </body>
 </html>
