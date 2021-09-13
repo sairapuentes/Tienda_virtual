@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+#contenedor{
+   margin-top: 10%;
+   
+}
+
+#login{
+    margin-top: 4%;
+}
+
+input{
+    margin: 5%;
+    padding: 3px;
+    padding-left: 10px;
+}
+
+button{
+    padding: 6px;
+    margin-left: 4%;
+    border-radius: 5px;
+
+}
