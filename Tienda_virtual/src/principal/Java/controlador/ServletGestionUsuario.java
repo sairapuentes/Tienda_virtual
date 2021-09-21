@@ -50,7 +50,7 @@ public class ServletGestionUsuario extends HttpServlet {
 			//crear
 			d=Integer.parseInt(request.getParameter("documento"));
 			u=request.getParameter("usuario");
-			c=request.getParameter("contraseña");
+			c=request.getParameter("contraseÃ±a");
 			r=request.getParameter("rol");
 			
 			usdto = new UsuarioDTO(d,u,c,r);
@@ -76,7 +76,7 @@ public class ServletGestionUsuario extends HttpServlet {
 			recolectad=usdao.consultarus(usdto);
 			documento= recolectad.getDocumento_usuario();
 			u= recolectad.getUsuario();
-			c= recolectad.getContraseña();
+			c= recolectad.getContraseÃ±a();
 			r= recolectad.getRol();
 			response.sendRedirect("usuario.jsp?d="+d+"&&u="+u+"&&c="+c+"&&r="+r);
 		}
@@ -86,7 +86,7 @@ public class ServletGestionUsuario extends HttpServlet {
 			boolean dato;
 			d=Integer.parseInt(request.getParameter("documento"));
 			u=request.getParameter("usuario");
-			c=request.getParameter("contraseña");
+			c=request.getParameter("contraseÃ±a");
 			r=request.getParameter("rol");
 			usdto=new UsuarioDTO(d,u,c,r);
 			usdao=new UsuarioDAO();
@@ -111,7 +111,7 @@ public class ServletGestionUsuario extends HttpServlet {
 			x= usdao.eliminar(usdto);
 			if(x>0){
 				JOptionPane.showMessageDialog(null, "El usuario fue eliminado");
-				response.sendRedirect("cliente.jsp");
+				response.sendRedirect("usuario.jsp");
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "El usuario no fue eliminado");
